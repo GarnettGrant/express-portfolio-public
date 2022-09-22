@@ -12,14 +12,14 @@ router.get('/home', function(req, res, next) {
 });
 
 
-/* GET About us page. */
-router.get('/aboutus', function(req, res, next) {
-  res.render('index', { title: 'About Us' });
+/* GET About me page. */
+router.get('/aboutme', function(req, res, next) {
+  res.render('index', { title: 'About Me' });
 });
 
-/* GET Products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
+/* GET Projects page. */
+router.get('/projects', function(req, res, next) {
+  res.render('index', { title: 'Projects' });
 });
 
 /* GET Services */
@@ -27,9 +27,9 @@ router.get('/services', function(req, res, next) {
   res.render('index', { title: 'Services' });
 });
 
-/* GET Contact us page. */
-router.get('/contactus', function(req, res, next) {
-  res.render('index', { title: 'Contact Us' });
+/* GET Contact me page. */
+router.get('/contactme', function(req, res, next) {
+  res.render('index', { title: 'Contact Me' });
 });
 
 
