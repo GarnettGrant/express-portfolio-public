@@ -1,0 +1,16 @@
+@import "variables";
+
+body {
+  background-color: white;
+  nav {
+    height: 4em;
+    /* On screens that are 992px or less, change height of nav */
+    @media screen and (max-width: 992px) {
+      height: 6em;
+    }
+  }
+}
+
+#description {
+  margin-top: auto;
+}

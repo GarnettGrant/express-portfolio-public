@@ -1,0 +1,16 @@
+body {
+  background-color: white;
+}
+body nav {
+  height: 4em;
+  /* On screens that are 992px or less, change height of nav */
+}
+@media screen and (max-width: 992px) {
+  body nav {
+    height: 6em;
+  }
+}
+
+#description {
+  margin-top: auto;
+}/*# sourceMappingURL=app.css.map */
