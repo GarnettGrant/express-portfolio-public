@@ -1,16 +1,44 @@
 body {
-  background-color: white;
+  background-color: #0d1117;
+  background-repeat: no-repeat;
+  color: white;
+  background-size: cover;
+  text-align: center;
 }
 body nav {
   height: 4em;
-  /* On screens that are 992px or less, change height of nav */
 }
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 640px) {
   body nav {
     height: 6em;
+    background-color: #0d1117;
+    background: solid;
+  }
+  body nav a {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center;
+    flex: auto;
+    padding-right: 2.5em;
   }
 }
 
-#description {
-  margin-top: auto;
+.contact-div-wrapper {
+  width: 30em;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(220, 230, 240, 0.05);
+  padding: 10px;
+  border-radius: 20px 20px;
+  height: 30em;
+  line-height: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.01em solid #dce6f0;
+  box-shadow: 0.5em 0.5em #dce6f0 !important;
+  overflow: auto;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.contact-div-wrapper ::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=app.css.map */

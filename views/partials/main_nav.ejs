@@ -1,16 +1,11 @@
-<!-- NAVBAR BEGIN -->
-<nav class="navbar navbar-expand-sm navbar-dark bg-black ">
-  <a class="navbar-brand" href="/"><img src="Assets/images/diliGentt_web.png" alt="diliGentt" width="120"
-      height="71"></a>
+<nav class="navbar navbar-expand-md navbar-dark shadow">
 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <div class="container-fluid">
 
-  </button>
-  <div class="navbar-collapse collapse bg-black" id="navbarNav">
-    <ul class="navbar-nav me-auto nav-fill">
-
+    <a class="navbar-brand" href="#">
+      <img src="Assets/images/diliGentt_web.png" alt="" width="120"  class="">Garnett Grant
+    </a>
+    <ul class="nav navbar-nav justify-content-end navbar-collapse collapse" id="navbarNav">
       <% if (title=="Home" || title=="/" ){ %>
         <li class="nav-item active">
           <% } else {%>
@@ -50,6 +45,11 @@
                   <%} %>
                     <a class="nav-link" href="/contactme">Contact <i class="fas fa-duotone fa-address-book"></i></a>
                 </li>
+    </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
   </div>
+ 
 </nav>
-<!-- NAVBAR END-->

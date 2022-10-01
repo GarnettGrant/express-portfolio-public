@@ -1,16 +1,44 @@
 @import "variables";
 
 body {
-  background-color: white;
-  nav {
+  background-color: $gitBlue;
+  background-repeat:no-repeat;
+  color: white;
+  background-size: cover;
+  text-align: center;
+  nav{
     height: 4em;
-    /* On screens that are 992px or less, change height of nav */
-    @media screen and (max-width: 992px) {
-      height: 6em;
+    @media only screen and (max-width:640px) {
+      height:6em;
+      background-color: $gitBlue;
+      background: solid;
+      a{
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center;
+        flex: auto;
+        padding-right: 2.5em;
+      }
     }
   }
 }
-
-#description {
-  margin-top: auto;
+.contact-div-wrapper{
+  width: 30em;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($mainBlue, $alpha: 0.05);
+  padding: 10px;
+  border-radius: 20px 20px ;
+  height: 30em;
+  line-height: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.01em solid $mainBlue;
+  box-shadow: 0.5em 0.5em $mainBlue !important;
+  overflow: auto;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
 }
