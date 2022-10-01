@@ -1,0 +1,71 @@
+.soc {
+  margin-top: 30px;
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+.soc li {
+  display: inline-block;
+}
+.soc a, .soc svg {
+  display: block;
+}
+.soc a {
+  display: inline-block;
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+.soc svg {
+  height: 100%;
+  width: 100%;
+}
+
+.icon {
+  background: black;
+  border-radius: 100%;
+  color: white;
+  fill: white;
+}
+.icon:hover {
+  background: white;
+  color: black;
+  fill: black;
+}
+
+.facebook:hover {
+  color: #3B579D;
+  fill: #3B579D;
+}
+
+.github {
+  background: white;
+  color: black;
+  fill: black;
+}
+.github:hover {
+  background: #6441a5;
+  color: white;
+  fill: white;
+}
+
+.linkedin {
+  color: #007BB6;
+  fill: #007BB6;
+  background: white;
+}
+.linkedin:hover {
+  color: #007BB6;
+  fill: #007BB6;
+  background: #dce6f0;
+}
+
+.stackoverflow:hover {
+  color: #fe7a15;
+  fill: #fe7a15;
+}
+
+.upwork:hover {
+  color: #96D953;
+  fill: #96D953;
+}/*# sourceMappingURL=icons.css.map */
