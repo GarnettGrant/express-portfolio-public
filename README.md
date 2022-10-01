@@ -5,4 +5,5 @@ Todo:
 <ul>
   <li>Fix Logo Positioning when width is small</li>
   <li>Fix broken burger (might need spongebob for this one!)</li>
+  <li>Finish all pages by Sunday!!!</li>
 </ul>
