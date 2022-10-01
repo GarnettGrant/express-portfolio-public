@@ -39,4 +39,8 @@ body nav {
 }
 .contact-div-wrapper ::-webkit-scrollbar {
   display: none;
+}
+
+.sm-width-wrapper {
+  zoom: 80%;
 }/*# sourceMappingURL=app.css.map */
