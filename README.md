@@ -7,4 +7,6 @@ Todo:
   <li>Fix broken burger (might need spongebob for this one!)</li>
   <li>Configure pages for different sizes</li>
   <li>Finish all pages by Sunday!!!</li>
+  <li>Rename Styles sheets</li>
+  <li>Dump unused files</li>
 </ul>
