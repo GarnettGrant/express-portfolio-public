@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Russo+One);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 * {
   box-sizing: border-box; }
 @media (min-width: 768px) {
@@ -317,6 +318,7 @@ footer, .social {
     transform: translate(-50%, -50%); }
 
 .projects .block .project-shot, .portofolio .block .project-shot {
+
   width: 100%;
   border-radius: 4px;
   height: auto; }
