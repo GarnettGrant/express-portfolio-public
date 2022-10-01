@@ -3,6 +3,9 @@ body {
   color: white;
   text-align: center;
 }
+body h3, body h1 {
+  letter-spacing: 10px;
+}
 body nav {
   height: 4em;
 }
@@ -41,6 +44,14 @@ body nav {
   display: none;
 }
 
+.projects h3 {
+  letter-spacing: 0px !important;
+}
+
 .sm-width-wrapper {
   zoom: 80%;
+}
+
+.garnett-headshot {
+  margin: -2em;
 }/*# sourceMappingURL=app.css.map */

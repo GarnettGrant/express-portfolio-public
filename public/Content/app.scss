@@ -4,6 +4,9 @@ body {
   background-color: $gitBlue;
   color: white;
   text-align: center;
+  h3, h1 {
+    letter-spacing: 10px
+  }
   nav{
     height: 4em;
     @media only screen and (max-width:640px) {
@@ -41,6 +44,17 @@ body {
   
 }
 
+.projects{
+  h3{
+
+    letter-spacing: 0px !important;
+  }
+}
+
 .sm-width-wrapper{
     zoom:80%;
+}
+
+.garnett-headshot{
+  margin: -2em;
 }
