@@ -1,3 +1,12 @@
+/*
+File name: contact.js 
+Student’s Name: Garnett Akeele Grant
+StudentID: 3011188923
+Date: October 2nd, 2022
+
+Form Validation Credits: https://codepen.io/georgiostsirigos/pen/rWLaZJ
+*/
+
 function validateForm() {
     var n = document.getElementById('name').value;
     var e = document.getElementById('email').value;
