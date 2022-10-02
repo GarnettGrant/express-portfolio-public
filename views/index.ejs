@@ -1,11 +1,9 @@
 <%- include('partials/header.ejs') %>
-
-
   <%- include('partials/stars.ejs') %>
 
-
     <header>
-      <img src="Assets/images/diliGentt_web.png" alt="" width="120"  style=" filter:blur(1px)!important; opacity:0.05; position: absolute; text-align: center; width: 30%; top:10%; left:36%">
+      <img src="Assets/images/diliGentt_web.png" alt="" width="120"
+        style=" filter:blur(1px)!important; opacity:0.05; position: absolute; text-align: center; width: 30%; top:10%; left:36%">
       <h1 id="title" class="display-1">
         A diliGentt Portfolio
         <br>
@@ -13,33 +11,40 @@
     </header>
 
     <main>
-      <div id="home-subheading"style="">
+      <div id="home-subheading" style="">
         <span style="font-style:italic">
           Search Responsibly
         </span>
         <br>
       </div>
-      <div style="color:white; position: absolute; width: 80%; top: 35%;" class="box-wrap d-flex flex-xl-row flex-sm-column">
+      <div style="color:white; position: absolute; width: 80%; top: 35%;"
+        class="box-wrap d-flex flex-xl-row flex-sm-column">
 
-       
-          <div class="box">
-            <a href="/aboutme"><p>About Me</p></a>
-          </div>
-       
+
         <div class="box">
-          <a href="/projects"><p>Projects</p></a>
+          <a href="/aboutme">
+            <p>About Me</p>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="/projects">
+            <p>Projects</p>
+          </a>
         </div>
         <div class="box">
-          <a href="/services"><p>Services</p></a>
+          <a href="/services">
+            <p>Services</p>
+          </a>
         </div>
         <div class="box">
-          <a href="/contactme"><p>Contact</p></a>
+          <a href="/contactme">
+            <p>Contact</p>
+          </a>
         </div>
       </div>
 
     </main>
-
-
 
     <%- include('partials/bottom_nav.ejs') %>
       <%- include('partials/footer.ejs') %>
