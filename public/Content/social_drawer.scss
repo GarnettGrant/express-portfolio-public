@@ -27,7 +27,7 @@ a{
 }
 
 .box{
-  width: $drawer-width;
+  width: 170px;
   height: $drawer-height - 20;
   background-color: darken($drawer-color, 10%);
   position: relative;
@@ -73,7 +73,6 @@ a{
   height: 45px;
   margin: 0;
   border-radius: 50%;
-  
   transition: all cubic-bezier(1,-0.49, 0.46, 0.8) 0.25s;
   overflow: hidden;
   
