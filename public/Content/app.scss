@@ -13,13 +13,6 @@ body {
       height:6em;
       background-color: $gitBlue;
       background: solid;
-      a{
-        text-align: center !important;
-        justify-content: center !important;
-        align-items: center;
-        flex: auto;
-        padding-right: 2.5em;
-      }
     }
   }
 }
@@ -58,3 +51,11 @@ body {
 .garnett-headshot{
   margin: -2em;
 }
+
+#home-subheading{
+  position: absolute; left:47%; top: 50%;
+  @media screen and (min-width: 380px) and (max-width: 1000px){
+    position: absolute; left:37%; top: 40%;
+}
+}
+

@@ -1,6 +1,11 @@
 <%- include('partials/header.ejs') %>
 
-  <%- include('partials/main_nav.ejs') %>
+<nav class="navbar navbar-expand-md navbar-dark shadow">
+<a class="navbar-brand" href="#">
+  <img src="Assets/images/diliGentt_web.png" alt="" width="120"  style="left:0%;">
+</a>
+</nav>
+
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
@@ -10,15 +15,36 @@
       <h1 id="title" class="display-1">
         A diliGentt Portfolio
         <br>
+      </h1>
+    </header>
+
+    <main>
+      <div id="home-subheading"style="">
         <span style="font-style:italic">
           Search Responsibly
         </span>
         <br>
-        <span>
-          <a href="/aboutme">About me</a>
-        </span>
-      </h1>      
-    </header>
+      </div>
+      <div style="color:white; position: absolute; width: 80%; top: 35%;" class="box-wrap d-flex flex-xl-row flex-sm-column">
+
+       
+          <div class="box">
+            <a href="/aboutme"><p>About Me</p></a>
+          </div>
+       
+        <div class="box">
+          <a href="/projects"><p>Projects</p></a>
+        </div>
+        <div class="box">
+          <a href="/services"><p>Services</p></a>
+        </div>
+        <div class="box">
+          <a href="/contactme"><p>Contact</p></a>
+        </div>
+      </div>
+
+    </main>
+
 
 
     <%- include('partials/bottom_nav.ejs') %>
