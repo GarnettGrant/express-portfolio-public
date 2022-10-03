@@ -11,10 +11,17 @@ Student’s Name: Garnett Akeele Grant
 StudentID: 3011188923
 Date: October 2nd, 2022
 */
+html {
+  min-height: 100% !important;
+  overflow-y: auto;
+  height: 0px;
+}
+
 body {
   background-color: #0d1117;
   color: white;
   text-align: center;
+  min-height: 100%;
 }
 body h3, body h1 {
   letter-spacing: 10px;
@@ -60,6 +67,10 @@ header {
 
 .sm-width-wrapper {
   zoom: 80%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .garnett-headshot {
