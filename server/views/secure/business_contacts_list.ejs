@@ -1,0 +1,57 @@
+<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/main_nav.ejs') %>
+        <%- include('../partials/page_header') %>
+
+        <p>Welcome to <%= title %>
+        </p>
+        <main class="container">
+            <div class="row">
+                <div class="col-mid-offset-3 col md-8">
+                    <h1>
+                        <% title %>
+                    </h1>
+                    <!-- <a href="/contactList/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i>Add
+                        a contact</a> -->
+                    <br>
+                    <table class="table.table-bordered table-striped table-hover">
+                        <!-- Header row -->
+                        <tr>
+    
+                            <th class="text-content col-2">Name</th>
+                            <th class="text-content col-2">Number</th>
+                            <th class="text-content col-4">Email</th>
+                            <th class="text-content col-1"></th>
+                            <th class="text-content col-xxl-1"></th>
+                        </tr>
+                        <% for (let count=0; count < 5; count++) {%>
+                            <tr>
+                                <td class="text-content col-2">
+                                    <%=Contacts[count]%>
+                                </td>
+                                <td class="text-content col-2">
+                                    <%=Contacts[count]%>
+                                </td>
+                                <td class="text-content col-4">
+                                    <%=Contacts[count]%>
+                                </td>
+                                <td class="text-content col-1">
+                                    <a href="/contactList/update/<%=Contacts[count]%>"class = "btn btn-primary">
+                                        <i class="fas fa-pencil alt"></i>Update
+                                    </a>
+                                </td>
+                                <td class="text-content col-1">
+                                    <a href="/contactList/update/<%=Contacts[count]%>"class = "btn btn-danger">
+                                        <i class="fas fa-trash alt"></i>Delete
+                                    </a>
+                                </td>
+                            </tr>
+                            <%}%>
+                    </table>
+                </div>
+            </div>
+        </main>
+            <%- include('../partials/bottom_nav') %>
+
+
+                <%- include('../partials/footer') %>
