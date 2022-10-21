@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/main_nav.ejs') %>
+        <%- include('../partials/page_header') %>
+
+            <!--content for the Add page-->
+            <div class="container">
+                <div class="row">
+                    <div class="offset-md-3 col-md-6">
+                        <h1>
+                            <%= title %>
+                        </h1>
+                        <form class="form" method="POST">
+                            <div class="form group">
+                                <label for="name">Contact Name</label>
+                                <input type="text" class="form control" id="name"
+                                    placeholder="Enter the Contact Name" name="name" value="<%=contact.name%>" required>
+                            </div>
+
+                            <div class="form group">
+                                <label for="Number">Contact Number</label>
+                                <input type="text" class="form control" id="number"
+                                    placeholder="Enter the Contact Number" name="number" value="<%=contact.number%>"
+                                    required>
+                            </div>
+
+                            <div class="form group">
+                                <label for="Contact Email">Contact Email</label>
+                                <input type="email" class="form control" id="email"
+                                    placeholder="Enter the year of publication" name="email"
+                                    value="<%=contact.email%>" required>
+                            </div>
+
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i>submit</button>
+                            <a href='/contactList' class="btn btn-warning"><i class="fas fa-undo"></i>cancel</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../partials/bottom_nav') %>
+                <%- include('../partials/stars.ejs') %>
+                    <%- include('../partials/login_form') %>
+
+                        <%- include('../partials/footer') %>

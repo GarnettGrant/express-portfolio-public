@@ -60,7 +60,8 @@ textarea {
   background: transparent;
 }
 
-.btn-mod, a.btn-mod {
+.btn-mod,
+a.btn-mod {
   box-sizing: border-box;
   padding: 4px 13px;
   color: #fff;
@@ -76,7 +77,10 @@ textarea {
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
 }
 
-.btn-mod.btn-border:hover, .btn-mod.btn-border:active, .btn-mod.btn-border:focus, .btn-mod.btn-border:active:focus {
+.btn-mod.btn-border:hover,
+.btn-mod.btn-border:active,
+.btn-mod.btn-border:focus,
+.btn-mod.btn-border:active:focus {
   color: #fff;
   border-color: #000;
   background: #000;
@@ -98,27 +102,35 @@ input {
 }
 
 textarea {
-  color: #FFF !important;
+  color: #fff !important;
   background: transparent !important;
   border: solid rgba(6, 36, 66, 0.4039215686) !important;
   border-radius: 5px 5px !important;
 }
 
-.container-form input {
-  color: #FFF !important;
+.transparent-input {
+  color: #fff !important;
   background: transparent !important;
   border: none;
   outline: none;
 }
 
-#submitButton {
+.submitButton {
   padding: 0 !important;
   color: white !important;
 }
-#submitButton button {
-  color: white;
+.submitButton button,
+.submitButton input {
+  color: white !important;
   border-color: rgba(6, 36, 66, 0.4039215686);
 }
-#submitButton :hover {
-  background-color: #dce6f0;
+.submitButton :hover {
+  background-color: #dce6f0 !important;
+}
+
+#register-button {
+  color: grey;
+}
+#register-button :hover {
+  color: white !important;
 }/*# sourceMappingURL=contact.css.map */

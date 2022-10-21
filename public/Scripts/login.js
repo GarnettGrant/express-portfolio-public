@@ -22,7 +22,7 @@ function validateForm() {
        
   
     if (!n.match(onlyLetters)) {
-        document.getElementById('usernameLabel').innerHTML = ('Please enter only letters');
+        document.getElementById('usenameLabel').innerHTML = ('Please enter only letters');
         document.getElementById('username').style.borderColor = "red";
         return false;
     }

@@ -1,0 +1,60 @@
+<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/main_nav.ejs') %>
+        <%- include('../partials/page_header') %>
+
+        
+      <main class="container" >
+         <br><br>
+        <!--message Area-->
+        <%if(message.length>0){%>
+           <div class="alert alert-danger">
+              <%=message%>
+           </div>
+           <%}%>
+              <div class="row">
+                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                    <form method="POST" autocomplete="off" class="form" onsubmit="return validateForm()">
+                       <!-- Username -->
+                       <fieldset class="form-group">
+                          <label for="username">Username:</label>
+                          <input type="text" class="form-control transparent-input" name="username" placeholder="Enter Username"
+                             id="username" required autofocus>
+                       </fieldset>
+                       
+                       <!-- Email -->
+
+                       <fieldset class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control transparent-input" name="email" placeholder="Enter email"
+                             id="email" required autofocus>
+                       </fieldset>
+                       
+                       <fieldset class="form-group">
+                          <label for="displayName">Display Name:</label>
+                          <input type="text" class="form-control transparent-input" name="displayName" placeholder="Enter Display Name"
+                             id="displayName" required autofocus>
+                       </fieldset>
+
+                       <fieldset class="form-group">
+                          <label for="password">password:</label>
+                          <input type="password" class="form-control transparent-input" name="password" placeholder="Enter password"
+                             id="password" required>
+                          <!-- <a href="/register">Register</a> -->
+                       </fieldset>
+                       <br>
+                       <fieldset class="submitButton form-group text-right">
+                          <input type="submit" class="btn btn-mod btn-border btn-large" value="register">
+                          <a href="/">
+                             <input type="button" class="btn btn-mod btn-border btn-large" value="cancel">
+                          </a>
+                       </fieldset>
+                    </form>
+                 </div>
+              </div>
+     </main>
+
+            <%- include('../partials/bottom_nav') %>
+                <%- include('../partials/stars.ejs') %>
+
+                        <%- include('../partials/footer') %>

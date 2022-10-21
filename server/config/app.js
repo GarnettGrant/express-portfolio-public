@@ -3,17 +3,19 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
+
+
+// authentication
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let session = require('express-session');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
 let mongoose = require('mongoose');
 let db = require('./db');
 
-// authentication
-let passport = require('passport')
-let session = require('express-session')
-let passportLocal = require('passport-local')
-let LocalStrategy = require('passport-local').Strategy;
-
 // point mongoose to db URI(Connection Stream)
-mongoose.connect(db.URI);
+mongoose.connect(db.URI, {useNewUrlParser: true, useUnifiedTopology: true});
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error: '));
 mongoDB.once('open', () => {
@@ -36,20 +38,33 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/contactList', contactsRouter);
-
 // express session
 app.use(session({
   secret: "SomeSecret",
   saveUninitialized: false,
   resave: false
 }))
-
-// passport middleware
+// passport middleware (initialize passport)
 app.use(passport.initialize());
 app.use(passport.session());
+//initialize flash - to maintain the error message
+app.use(flash());
+//passport user configuration
+//create a user model instance
+let userModel = require('../models/users');
+let User = userModel.user;
+
+// implement a user authentication strategy
+passport.use(User.createStrategy());
+
+//serialize and deserialize the user info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+//routers
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/contactList', contactsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
