@@ -51,8 +51,21 @@
                     <% } else {%>
                   <li class="nav-item">
                     <%} %>
-                      <a class="nav-link" href="/contactList">Contact List <i class="fas fa-duotone fa-lock"></i></a>
+                      <a class="nav-link" href="/contactList">Contact List 
+                        
+                        <% if(loggedIn == true){ %>
+                          <i id="contact-lock"class="fas fa-duotone fa-unlock"></i></a>
+                        <%} else {%>
+
+                          <i id="contact-lock"class="fas fa-duotone fa-lock"></i></a>
+                        <%}%>
                   </li>
+
+                  <% if(typeof displayName == 'string' && displayName) { %>
+                    <li class="navbar-text"><i class="fas fa-lg fa-user">        </i> Welcome, <%= displayName %></li>
+                    <li class="nav-item"><a href="/logout" class="nav-link">
+                      <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+                  <% }%>
     </ul>
 
     <button onclick="fixContent()" id="burgerbutton" class="navbar-toggler" type="button" data-bs-toggle="collapse"

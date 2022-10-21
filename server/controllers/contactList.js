@@ -11,13 +11,24 @@ module.exports.displayContactList = (req, res, next) => {
         }
         else {
             //console.log(ContactList);
-            res.render('contactList/list', { title: 'Contacts', ContactList: contactList });
+            res.render('contactList/list',
+                {
+                    title: 'Contacts',
+                    ContactList: contactList,
+                    displayName: req.user ? req.user.displayName : '',
+                    loggedIn: req.isAuthenticated()
+                });
         }
     });
 }
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('contactList/add', { title: 'Add Contact' })
+    res.render('contactList/add',
+        {
+            title: 'Add Contact',
+            displayName: req.user ? req.user.displayName : '',
+            loggedIn: req.isAuthenticated()
+        })
 
 }
 
@@ -60,7 +71,7 @@ module.exports.processEditPage = (req, res, next) => {
         "contact_name": req.body.name,
         "contact_number": req.body.number,
         "contact_email": req.body.email
-    
+
     });
     Contact.updateOne({ _id: id }, updatedContact, (err) => {
         if (err) {

@@ -45,4 +45,4 @@ let user = mongoose.Schema({
 
 let options = ({ missingPasswordError: 'wrong/Missing Password' });
 user.plugin(passportLocalMongoose, options);
-module.exports.user = mongoose.model("user", user);
+module.exports.user = mongoose.model('user', user);

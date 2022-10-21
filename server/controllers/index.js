@@ -32,7 +32,8 @@ module.exports.displayLoginPage = (req, res, next) => {
         res.render('auth/login', {
             title: 'Login',
             message: req.flash('loginMessage'),
-            displayName: req.user ? req.user.displayName : '' // by default display name is empty 
+            displayName: req.user ? req.user.displayName : '', // by default display name is empty 
+            loggedIn: req.isAuthenticated()
         })
     }
     else {
@@ -68,7 +69,8 @@ module.exports.displayRegisterPage = (req, res, next) =>{
         {
             title: 'Register',
             message: req.flash('registerMessage'),
-            displayName: req.user ? req.user.displayName: ''
+            displayName: req.user ? req.user.displayName: '',
+            loggedIn: req.isAuthenticated()
         });
     }
     else{
@@ -98,7 +100,7 @@ module.exports.processRegisterPage = (req, res, next) =>{
             return res.render('auth/register',
             {
                 title: 'Register',
-                message:req.flash('RegisterMessage'),
+                message:req.flash('registerMessage'),
                 displayName:''
             });
         }
@@ -118,6 +120,7 @@ module.exports.performLogout = (req, res, next)=>{
         if (err){
             return next(err);
         }
+        res.redirect('/')
     });
 
 }
