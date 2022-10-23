@@ -53,12 +53,12 @@
                     <%} %>
                       <a class="nav-link" href="/contactList">Contact List 
                         
-                        <% if(loggedIn == true){ %>
+                        <% if( loggedIn == true){ %>
                           <i id="contact-lock"class="fas fa-duotone fa-unlock"></i></a>
                         <%} else {%>
 
                           <i id="contact-lock"class="fas fa-duotone fa-lock"></i></a>
-                        <%}%>
+                        <%}%> 
                   </li>
 
                   <% if(typeof displayName == 'string' && displayName) { %>

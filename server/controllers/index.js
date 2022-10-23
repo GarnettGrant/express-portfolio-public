@@ -8,19 +8,35 @@ let userModel = require("../models/users");
 let User = userModel.user;
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', { title: 'Home' });
+    res.render('index', { 
+        title: 'Home',
+        loggedIn: req.isAuthenticated(),
+        displayName: req.user ? req.user.displayName : ''
+    });
 }
 module.exports.displayAboutMePage = (req, res, next) => {
-    res.render('aboutme', { title: 'About Me' });
+    res.render('aboutme', { 
+        title: 'About Me',
+        loggedIn: req.isAuthenticated(),
+        displayName: req.user ? req.user.displayName : '' });
 }
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('projects', { title: 'Projects' });
+    res.render('projects', { 
+    title: 'Projects',
+    loggedIn: req.isAuthenticated(),
+    displayName: req.user ? req.user.displayName : '' });
 }
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('services', { title: 'Services' });
+    res.render('services', { 
+        title: 'Services',
+        loggedIn: req.isAuthenticated(),
+        displayName: req.user ? req.user.displayName : '' });
 }
 module.exports.displayContactMePage = (req, res, next) => {
-    res.render('contact', { title: 'Contact Me' });
+    res.render('contact', { 
+        title: 'Contact Me',
+        loggedIn: req.isAuthenticated(),
+        displayName: req.user ? req.user.displayName : '' });
 }
 
 

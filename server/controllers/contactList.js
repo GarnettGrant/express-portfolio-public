@@ -2,10 +2,11 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-let Contact = require('../models/contacts');
+let contact = require('../models/contacts');
+// let Contacts = Contact.find().sort(({contact_name : 1}));
 
 module.exports.displayContactList = (req, res, next) => {
-    Contact.find((err, contactList) => {
+    contact.find((err, contactList) => {
         if (err) {
             return console.error(err);
         }
@@ -14,12 +15,12 @@ module.exports.displayContactList = (req, res, next) => {
             res.render('contactList/list',
                 {
                     title: 'Contacts',
-                    ContactList: contactList,
+                    contact: contactList,
                     displayName: req.user ? req.user.displayName : '',
                     loggedIn: req.isAuthenticated()
                 });
         }
-    });
+    }).sort({contact_name : 1});
 }
 
 module.exports.displayAddPage = (req, res, next) => {
@@ -33,12 +34,12 @@ module.exports.displayAddPage = (req, res, next) => {
 }
 
 module.exports.processAddPage = (req, res, next) => {
-    let newContact = Contact({
+    let newContact = contact({
         "contact_name": req.body.name,
         "contact_number": req.body.number,
         "contact_email": req.body.email
     });
-    Contact.create(newContact, (err, contact) => {
+    contact.create(newContact, (err, contact) => {
         if (err) {
             console.log(err);
             res.end(err);
@@ -51,13 +52,17 @@ module.exports.processAddPage = (req, res, next) => {
 
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
-    Contact.findById(id, (err, contactToEdit) => {
+    contact.findById(id, (err, contactToEdit) => {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
-            res.render('contactList/edit', { title: 'Edit Contact', contact: contactToEdit });
+            res.render('contactList/edit', { 
+                title: 'Edit Contact', 
+                contact: contactToEdit,
+                displayName: req.user ? req.user.displayName : '',
+                loggedIn: req.isAuthenticated() });
 
         }
     });
@@ -66,14 +71,14 @@ module.exports.displayEditPage = (req, res, next) => {
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id
     console.log(req.body);
-    let updatedContact = Contact({
+    let updatedContact = contact({
         "_id": id,
         "contact_name": req.body.name,
         "contact_number": req.body.number,
-        "contact_email": req.body.email
+        "contact_email": req.body.email,
 
     });
-    Contact.updateOne({ _id: id }, updatedContact, (err) => {
+    contact.updateOne({ _id: id }, updatedContact, (err) => {
         if (err) {
             console.log(err);
             res.end(err);
@@ -86,7 +91,7 @@ module.exports.processEditPage = (req, res, next) => {
 
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
-    Contact.remove({ _id: id }, (err) => {
+    contact.remove({ _id: id }, (err) => {
         if (err) {
             console.log(err);
             res.end(err);

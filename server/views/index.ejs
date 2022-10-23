@@ -44,8 +44,15 @@
         </div>
         <div class="box">
           <a href="/contactList">
-            <p style="zoom:90%">Business Contact List <i class="fas fa-duotone fa-lock "></i></p>
+            <p style="zoom:90%">Business Contact List <% if( loggedIn==true){ %>
+                <i id="contact-lock" class="fas fa-duotone fa-unlock"></i>
           </a>
+          <%} else {%>
+
+            <i id="contact-lock" class="fas fa-duotone fa-lock"></i></a>
+            <%}%>
+              </p>
+              </a>
         </div>
       </div>
 

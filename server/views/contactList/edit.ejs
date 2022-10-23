@@ -6,27 +6,24 @@
             <!--content for the Add page-->
             <div class="container">
                 <div class="row">
-                    <div class="offset-md-3 col-md-6">
-                        <h1>
-                            <%= title %>
-                        </h1>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <form class="form" method="POST">
-                            <div class="form group">
+                            <div class="form group form-row">
                                 <label for="name">Contact Name</label>
-                                <input type="text" class="form control" id="name"
+                                <input type="text" class="form control transparent-input" id="name"
                                     placeholder="Enter the Contact Name" name="name" value="<%=contact.name%>" required>
                             </div>
 
                             <div class="form group">
                                 <label for="Number">Contact Number</label>
-                                <input type="text" class="form control" id="number"
+                                <input type="text" class="form control transparent-input" id="number"
                                     placeholder="Enter the Contact Number" name="number" value="<%=contact.number%>"
                                     required>
                             </div>
 
                             <div class="form group">
                                 <label for="Contact Email">Contact Email</label>
-                                <input type="email" class="form control" id="email"
+                                <input type="email" class="form control transparent-input" id="email"
                                     placeholder="Enter the year of publication" name="email"
                                     value="<%=contact.email%>" required>
                             </div>
